@@ -1,0 +1,12 @@
+<%- include('./partials/head.ejs') %> <% producten.forEach(product => { %> <% if(product.categorie.titel === "Pinda") { %>
+<article>
+    <h2><%= product.titel %></h2>
+    <% if(product.titel === "Mijn eerste pinda in 6 stappen") { %>
+    <img class="article-img" src="/Pinda-6-stappen.webp" alt="Pinda in 6 stappen" />
+    <% } else if(product.titel === "Mijn eerste pinda in 3 stappen") { %>
+    <img class="article-img" src="/Pinda-3-stappen.webp" alt="Pinda in 3 stappen" />
+    <% } else if(product.titel === "Pinda Opvolgkit") { %>
+    <img class="article-img" src="/Pinda-opvolgkit.webp" alt="Pinda opvolgkit" />
+    <% } %>
+</article>
+<% } %> <% }); %> <%- include('./partials/foot.ejs') %>

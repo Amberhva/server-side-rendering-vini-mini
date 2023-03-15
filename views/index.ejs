@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+<main class="main">
+    <% categories.forEach(category => { %>
+
+    <div class="container">
+        <!--image row start-->
+        <div class="row">
+            <!--image card start-->
+            <div class="image">
+                <img class="article-img" src="/assets/<%=category.plaatjes%>.png" />
+                <div class="details">
+                    <h2><span><%= category.titel %></span></h2>
+                    <div class="more">
+                        <a href="/<%= category.titel %>" class="read-more">Bekijk <span>product</span></a>
+                        <div class="icon-links">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fas fa-paperclip"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</main>
+<%- include('./partials/foot') %>
