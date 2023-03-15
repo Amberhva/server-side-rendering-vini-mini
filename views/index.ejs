@@ -1,20 +1,19 @@
 <%- include('./partials/head') %>
 <main class="main">
     <% categories.forEach(category => { %>
-
     <div class="container">
         <!--image row start-->
         <div class="row">
             <!--image card start-->
             <div class="image">
-                <img src="/<%=category.plaatjes%>.png" />
                 <div class="details">
                     <h2><span><%= category.titel %></span></h2>
+                    <img class="logo" src="/<%=category.titel%>.png" />
                     <div class="more">
                         <a href="/<%= category.titel %>" class="read-more">Bekijk <span>product</span></a>
                         <div class="icon-links">
                             <a href="#"><i class="fas fa-heart"></i></a>
-                            <a href="#"><i class="fas fa-paperclip"></i></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
                         </div>
                     </div>
                 </div>
