@@ -1,12 +1,52 @@
-<%- include('./partials/head.ejs') %> <% producten.forEach(product => { %> <% if(product.categorie.titel === "Pinda") { %>
-<article>
-    <h2><%= product.titel %></h2>
-    <% if(product.titel === "Mijn eerste pinda in 6 stappen") { %>
-    <img class="article-img" src="/Pinda-6-stappen.webp" alt="Pinda in 6 stappen" />
-    <% } else if(product.titel === "Mijn eerste pinda in 3 stappen") { %>
-    <img class="article-img" src="/Pinda-3-stappen.webp" alt="Pinda in 3 stappen" />
-    <% } else if(product.titel === "Pinda Opvolgkit") { %>
-    <img class="article-img" src="/Pinda-opvolgkit.webp" alt="Pinda opvolgkit" />
-    <% } %>
-</article>
+<%- include('./partials/head.ejs') %>
+
+<main class="main-content">
+    <% producten.forEach(product => { %> <% if(product.categorie.titel === "Pinda") { %>
+    <section class="container">
+        <article class="row">
+            <div class="image">
+                <div class="details">
+                    <h2><span><%= product.titel %></span></h2>
+                    <% if(product.titel === "Mijn eerste pinda in 6 stappen") { %>
+                    <img class="logo-allergy" src="/Pinda-6-stappen.png" alt="Mijn eerste pinda in 6 stappen" />
+                    <div class="category">
+                        <a href="/<%= product.titel %>" class="product-info">Prijs &euro;<span><%= product.prijs %></span></a>
+                        <div class="icon-links">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
+                        </div>
+                    </div>
+                    <% } else if(product.titel === "Mijn eerste pinda in 3 stappen") { %>
+                    <img class="logo-allergy" src="/Pinda-3-stappen.png" alt="Mijn eerste pinda in 3 stappen" />
+                    <div class="category">
+                        <a href="/<%= product.titel %>" class="product-info">Prijs &euro;<span><%= product.prijs %></span></a>
+                        <div class="icon-links">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
+                        </div>
+                    </div>
+                    <% } else if(product.titel === "Pinda Opvolgkit") { %>
+                    <img class="logo-allergy" src="/Pinda-opvolgkit.png" alt="Pinda opvolgkit" />
+                    <div class="category">
+                        <a href="/<%= product.titel %>" class="product-info">Prijs &euro;<span><%= product.prijs %></span></a>
+                        <div class="icon-links">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
+                        </div>
+                    </div>
+                    <% } else if(product.titel === "Pinda presentje") { %>
+                    <img class="logo-allergy" src="<%= product.plaatjes[0].url %>" alt="Pinda presentje" />
+                    <div class="category">
+                        <a href="/<%= product.titel %>" class="product-info">Prijs &euro;<span><%= product.prijs %></span></a>
+                        <div class="icon-links">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
 <% } %> <% }); %> <%- include('./partials/foot.ejs') %>

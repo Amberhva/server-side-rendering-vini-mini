@@ -30,10 +30,71 @@
 body {
     height: 100vh;
     font-family: "Montserrat";
+    font-weight: 200;
 }
 
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.87em 10%;
+    background-color: var(--wit);
+}
+
+.image-vini-mini {
+    width: 5.6em;
+    height: 5em;
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.nav-links a,
+.cta,
+.overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: var(--donkerblauw);
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0em 1.25em;
+}
+
+.nav-links li a {
+    transition: color 0.3s ease 0s;
+}
+
+.nav-links li a:hover {
+    color: var(--pinda-kleur);
+}
+
+.cta {
+    padding: 0.56em 1.56em;
+    background-color: var(--donkerblauw);
+    color: var(--wit);
+    border: none;
+    border-radius: 3.12em;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+}
+
+/* Mobile Navigation */
+.menu {
+    display: none;
+}
+
+/* Main Content */
 .container {
-    margin: 30px;
+    margin: 1.87em;
 }
 
 .row {
@@ -43,14 +104,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* .logo {
-    width: 110px;
-    height: 110px;
-    position: fixed;
-    left: 38%;
-    top: 40%;
-} */
-
 .image {
     background: var(--pinda-kleur);
     position: relative;
@@ -59,6 +112,7 @@ body {
     height: 300px;
     margin: 20px;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .image img {
@@ -85,7 +139,7 @@ body {
 
 .image .details h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
     text-transform: uppercase;
     font-weight: 300;
     margin-top: 70px;
@@ -101,7 +155,7 @@ body {
     transform: translateY(-30px);
 }
 
-.image .details .logo {
+.image .details .logo-allergy {
     width: 110px;
     height: 110px;
     margin: 1.5em 5em 17em 11em;
@@ -110,12 +164,12 @@ body {
     transition-property: opacity, transform;
 }
 
-.image:hover .details .logo {
+.image:hover .details .logo-allergy {
     opacity: 1;
     transform: translateY(-40px);
 }
 
-.more {
+.category {
     position: absolute;
     background: var(--ei-kleur);
     width: 100%;
@@ -128,11 +182,11 @@ body {
     transition-property: bottom;
 }
 
-.image:hover .more {
+.image:hover .category {
     bottom: 0;
 }
 
-.more .read-more {
+.category .product-info {
     color: var(--donkerblauw);
     text-decoration: none;
     font-size: 20px;
@@ -140,20 +194,43 @@ body {
     text-transform: uppercase;
 }
 
-.more .read-more span {
+.category .product-info span {
     font-weight: 900;
 }
 
-.more .icon-links i {
+.category .icon-links i {
     color: var(--donkerblauw);
     font-size: 20px;
 }
 
-.more .icon-links a:not(:last-child) i {
+.category .icon-links a:not(:last-child) i {
     margin-right: 20px;
 }
 
-/* Responsive CSS */
+/* MEDIA QUERIES */
+/* Navigation */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px;
+    }
+    .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav-links,
+    .cta {
+        display: none;
+    }
+    .menu {
+        display: initial;
+    }
+}
+
+/* Main content */
 
 @media (max-width: 1080px) {
     .image {
@@ -167,8 +244,8 @@ body {
         font-size: 16px;
     }
 
-    .more .read-more,
-    .more .icon-links a i {
+    .category .product-info,
+    .category .icon-links a i {
         font-size: 18px;
     }
 }

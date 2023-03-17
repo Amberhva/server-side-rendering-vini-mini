@@ -1,8 +1,26 @@
-<%- include('./partials/head.ejs') %> <% producten.forEach(product => { %> <% if(product.categorie.titel === "Ei") { %>
-<article>
-    <h2><%= product.titel %></h2>
-    <% if(product.titel === "Mijn eerste ei in 3 stappen") { %>
-    <img class="article-img" src="/Ei-in-3-stappen.png" alt="Ei in 3 stappen" />
-    <% } %>
-</article>
+<%- include('./partials/head.ejs') %>
+
+<main class="main-content">
+    <% producten.forEach(product => { %> <% if(product.categorie.titel === "Ei") { %>
+    <section class="container">
+        <article class="row">
+            <div class="image">
+                <div class="details">
+                    <h2><span><%= product.titel %></span></h2>
+                    <% if(product.titel === "Mijn eerste ei in 3 stappen") { %>
+                    <img class="logo-allergy" src="/Ei-in-3-stappen.png" alt="Mijn eerste ei in 3 stappen" />
+                    <div class="category">
+                        <a href="/<%= product.titel %>" class="product-info">Prijs &euro;<span><%= product.prijs %></span></a>
+                        <div class="icon-links">
+                            <a href="#"><i class="fas fa-heart"></i></a>
+                            <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
+
 <% } %> <% }); %> <%- include('./partials/foot.ejs') %>

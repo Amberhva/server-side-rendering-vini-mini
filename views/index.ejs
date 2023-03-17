@@ -1,25 +1,22 @@
 <%- include('./partials/head') %>
-<main class="main">
+<main class="main-content">
     <% categories.forEach(category => { %>
-    <div class="container">
-        <!--image row start-->
-        <div class="row">
-            <!--image card start-->
+    <section class="container">
+        <article class="row">
             <div class="image">
                 <div class="details">
                     <h2><span><%= category.titel %></span></h2>
-                    <img class="logo" src="/<%=category.titel%>.png" />
-                    <div class="more">
-                        <a href="/<%= category.titel %>" class="read-more">Bekijk <span>product</span></a>
+                    <img class="logo-allergy" src="/<%=category.titel%>.png" />
+                    <div class="category">
+                        <a href="/<%= category.titel %>" class="product-info">Bekijk <span>product</span></a>
                         <div class="icon-links">
-                            <a href="#"><i class="fas fa-heart"></i></a>
                             <a href="#"><i class="fa-sharp fa-solid fa-share-from-square"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
     <% }); %>
 </main>
 <%- include('./partials/foot') %>
