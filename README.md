@@ -33,7 +33,7 @@ Elke frontender bij FDND heeft de taak gekregen om met node, een server-side web
 ![image](https://user-images.githubusercontent.com/112861033/225826034-088b2d71-238d-4492-ad9d-2cd7ae11cbe4.png)
 
 ## Live link
-https://cyan-tasty-blackbuck.cyclic.app
+https://wicked-lime-tadpole.cyclic.app
 
 ## Checklist
 ✅ Wat er wel is gelukt:
